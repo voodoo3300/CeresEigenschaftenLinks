@@ -1,0 +1,12 @@
+{% set placeholderText = config("CeresEigenschaftenLinks.placeholder.text") %}
+ 
+<p class="h4"><i aria-hidden="true" class="fa fa-info mr-1"></i>&nbsp;Weitere Informationen</p>
+{%  for merkmal in item.documents[0].data.properties %}
+
+    	 {% if merkmal.propertyId == 18 %}
+<p>Dieser Ring wird mit einer kostenfreien Gravur angeboten!</p><p>Das Gravurangebot umfasst eine Gravur auf dem hier angebotenen Artikel, in den angebotenen Schriftarten. Die Zeichenanzahl wird durch den zur Verfügung stehenden Platz der Gravurfläche begrenzt. Sternzeichensymbole oder Herzen sind je nach Verfügbarkeit auch möglich.
+
+Besondere Gravurwünsche (Firmenlogo, Familienwappen, etc.) sind gegen Aufpreis (je nach Aufwand) ebenfalls möglich: Dazu benötigen wir das Bild als hochauflösende Datei oder im Optimalfall als Vektorgrafik. Grafiken, Logos oder Strichzeichnungen sind möglich, Fotos nicht. Nehmen Sie dazu bitte mit uns Kontakt auf.</p>
+<div><img src="https://www.uhrenrudloff.de/images/gallery/Gravuren/ring.PNG" class="img-responsive" /></div>
+    	{% endif %}
+    {% endfor %}
