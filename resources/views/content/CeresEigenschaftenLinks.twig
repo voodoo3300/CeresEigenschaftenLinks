@@ -1,12 +1,61 @@
 {% set placeholderText = config("CeresEigenschaftenLinks.placeholder.text") %}
- 
-<p class="h4"><i aria-hidden="true" class="fa fa-info mr-1"></i>&nbsp;Weitere Informationen</p>
-{%  for merkmal in item.documents[0].data.properties %}
+<div id="de_jm_infowidget">
+	<p class="h4">Weitere Informationen</p>
 
-    	 {% if merkmal.propertyId == 18 %}
-<p>Dieser Ring wird mit einer kostenfreien Gravur angeboten!</p><p>Das Gravurangebot umfasst eine Gravur auf dem hier angebotenen Artikel, in den angebotenen Schriftarten. Die Zeichenanzahl wird durch den zur Verfügung stehenden Platz der Gravurfläche begrenzt. Sternzeichensymbole oder Herzen sind je nach Verfügbarkeit auch möglich.
+	<ul class="list-unstyled">
+	{%  for merkmal in item.documents[0].data.properties %}
+			{% if merkmal.propertyId == 74 %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zu unserem Gravurangebot</a></li>
+			{% endif %}
 
-Besondere Gravurwünsche (Firmenlogo, Familienwappen, etc.) sind gegen Aufpreis (je nach Aufwand) ebenfalls möglich: Dazu benötigen wir das Bild als hochauflösende Datei oder im Optimalfall als Vektorgrafik. Grafiken, Logos oder Strichzeichnungen sind möglich, Fotos nicht. Nehmen Sie dazu bitte mit uns Kontakt auf.</p>
-<div><img src="https://www.uhrenrudloff.de/images/gallery/Gravuren/ring.PNG" class="img-responsive" /></div>
-    	{% endif %}
-    {% endfor %}
+			{% if merkmal.propertyId == 33 %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Hinweise zur Wasserdichtigkeit</a></li>
+			{% endif %}
+
+			{% if merkmal.propertyId == 130 %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zu den Armspangengrößen</a></li>
+			{% endif %}
+
+			{% if merkmal.propertyId in [86, 87, 89] %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Größentabelle BERING-Innenringe</a></li>
+			{% endif %}
+
+			{% if merkmal.propertyId in [90, 91] %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Größentabelle BERING-Außenringe</a></li>
+			{% endif %}
+
+			{% if merkmal.propertyId == 92 %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Größentabelle BERING Ringkombinationen</a></li>
+			{% endif %}
+
+			{% if merkmal.propertyId == 12 %}
+				{% if merkmal.propertySelectionId in [96, 512] %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Pflegehinweise zum Lederband</a></li>
+				{% endif %}
+			{% endif %}
+
+			{% if merkmal.propertyId == 9 %}
+				{% if merkmal.propertySelectionId in [56, 61, 63, 65, 67] %}
+				<!-- Quarz Info -->
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zum Uhrwerk</a></li>
+				{% endif %}
+
+				{% if merkmal.propertySelectionId in [438, 443] %}
+				<!-- Funk Info -->
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zum Uhrwerk</a></li>
+				{% endif %}
+
+				{% if merkmal.propertySelectionId in [57, 58] %}
+				<!-- Auto Info -->
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zum Uhrwerk</a></li>
+				{% endif %}
+
+				{% if merkmal.propertySelectionId == 64 %}
+				<!-- Hand Info -->
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zum Uhrwerk</a></li>
+				{% endif %}
+
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>

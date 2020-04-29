@@ -13,6 +13,11 @@
             "key"           :"CeresEigenschaftenLinks\\Containers\\CeresEigenschaftenLinksContainer",
             "name"          :"CeresEigenschaftenLinks",
             "description"   :"Zeigt Links, wenn Eigenschaften gesetzt sind"
+        },
+        {
+            "key"           :"CeresEigenschaftenLinks\\Containers\\CeresEigenschaftenLinksContainerStyles",
+            "name"          :"CeresEigenschaftenLinksStyles",
+            "description"   :"Zeigt Links, wenn Eigenschaften gesetzt sind"
         }
     ]
 }

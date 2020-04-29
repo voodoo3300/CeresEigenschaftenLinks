@@ -1,0 +1,18 @@
+#de_jm_infowidget {    
+    width: 85%;
+    margin: 15px auto;
+    border: 1px solid #e3e7eb;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+#de_jm_infowidget ul {
+    margin: 0;
+}
+
+#de_jm_infowidget p {
+    font-size: 1.25rem;
+    border-bottom: 1px solid #e3e7eb;
+    padding-bottom: 10px;
+}
