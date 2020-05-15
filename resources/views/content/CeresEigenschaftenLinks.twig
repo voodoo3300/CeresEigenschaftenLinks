@@ -1,15 +1,18 @@
 {% set placeholderText = config("CeresEigenschaftenLinks.placeholder.text") %}
 <div id="de_jm_infowidget">
 	<p class="h4">Weitere Informationen</p>
-
+	{{ item.documents[0].data.variationProperties[0].id }}
 	<ul class="list-unstyled">
 	{%  for merkmal in item.documents[0].data.properties %}
+	{% if merkmal.propertyId == 10 %}
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="/service/gravuren" class="d-inline-block">Video?!</a></li>
+			{% endif %}
 			{% if merkmal.propertyId == 74 %}
-				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zu unserem Gravurangebot</a></li>
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="/service/gravuren" class="d-inline-block">Informationen zu unserem Gravurangebot</a></li>
 			{% endif %}
 
 			{% if merkmal.propertyId == 33 %}
-				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Hinweise zur Wasserdichtigkeit</a></li>
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="/service/wasserdichtheit" class="d-inline-block">Hinweise zur Wasserdichtigkeit</a></li>
 			{% endif %}
 
 			{% if merkmal.propertyId == 130 %}
@@ -17,15 +20,15 @@
 			{% endif %}
 
 			{% if merkmal.propertyId in [86, 87, 89] %}
-				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Größentabelle BERING-Innenringe</a></li>
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="/produktinformationen/bering-ringroessen#Innen" class="d-inline-block">Größentabelle BERING-Innenringe</a></li>
 			{% endif %}
 
 			{% if merkmal.propertyId in [90, 91] %}
-				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Größentabelle BERING-Außenringe</a></li>
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="/produktinformationen/bering-ringroessen#aussen" class="d-inline-block">Größentabelle BERING-Außenringe</a></li>
 			{% endif %}
 
 			{% if merkmal.propertyId == 92 %}
-				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Größentabelle BERING Ringkombinationen</a></li>
+				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="/produktinformationen/bering-ringroessen#aussen" class="d-inline-block">Größentabelle BERING Ringkombinationen</a></li>
 			{% endif %}
 
 			{% if merkmal.propertyId == 12 %}
@@ -34,7 +37,7 @@
 				{% endif %}
 			{% endif %}
 
-			{% if merkmal.propertyId == 9 %}
+			{% if merkmal.propertyId == 999999 %}
 				{% if merkmal.propertySelectionId in [56, 61, 63, 65, 67] %}
 				<!-- Quarz Info -->
 				<li><i aria-hidden="true" class="fa fa-info mr-1"></i> <a rel="noopener" href="#" class="d-inline-block">Informationen zum Uhrwerk</a></li>
